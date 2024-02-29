@@ -64,8 +64,6 @@ void initNcurses() {
     noecho();
     cbreak();
     nodelay(stdscr, TRUE);
-    
-    //Bhawana  
     getmaxyx(stdscr, maxY, maxX);
 }
 
@@ -95,8 +93,6 @@ void drawScreen(snakeCell snake[], unsigned int delay) {
     clear();
 
     drawSnakePit(maxX, maxY, gameInfo.score);
-
-    //Alana
     if (snake[0].x == t.x && snake[0].y == t.y) {
           tail += t.value;
           numTrophy--;
@@ -168,7 +164,6 @@ int main() {
 
     //Changing the while condition to meet movement needs
     while(!gameInfo.gameOver) {
-        // Bhawana and Ricardo
         gameInfo.nextX = snake[0].x;
         gameInfo.nextY = snake[0].y;
 
